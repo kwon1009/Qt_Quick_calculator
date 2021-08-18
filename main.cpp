@@ -10,10 +10,7 @@ int main(int argc, char *argv[])
 #endif
 
     QGuiApplication app(argc, argv);
-
     QQmlApplicationEngine engine("qrc:/main.qml");
-
     Connector* con = new Connector(&engine);
-
     return app.exec();;
 }

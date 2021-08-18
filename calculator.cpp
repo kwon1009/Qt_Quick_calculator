@@ -29,10 +29,7 @@ QString Calculator::getErrorMessage(errors err)
     return str;
 }
 
-QString Calculator::getLastCal()
-{
-    return m_lastCal;
-}
+QString Calculator::getLastCal() { return m_lastCal; }
 
 void Calculator::setValues(QString calLine)
 {
