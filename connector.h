@@ -1,20 +1,25 @@
 #ifndef CONNECTOR_H
 #define CONNECTOR_H
 
-#include <QQuickView>
+#include <QQuickWindow>
 #include <QObject>
+#include <QQmlApplicationEngine>
 #include "calculator.h"
 
 class Connector : public QObject
 {
     Q_OBJECT
 private:
-    QObject* root;
+    QQmlApplicationEngine* mEngine;
+    QObject* mRoot;
+    QQuickWindow* mMainView;
+
     Calculator *cal;
     void setConnect();
+    void setWindow(QQuickWindow* window);
 
 public:
-    Connector(QObject* obj);
+    Connector(QQmlApplicationEngine* engine);
     ~Connector();
 
 signals:
