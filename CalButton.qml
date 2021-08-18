@@ -14,4 +14,9 @@ Rectangle {
         anchors.centerIn: parent
         text: btnTxt
     }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: value_input(btnTxt)
+    }
 }

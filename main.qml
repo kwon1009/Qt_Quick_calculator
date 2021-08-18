@@ -33,10 +33,8 @@ Window {
     // display
     Rectangle {
         id: display
-        width: 190
-        height: 40
-        x: 10
-        y: 10
+        width: 190; height: 40
+        x: 10; y: 10
         border.color: "gray"
         border.width: 1
 
@@ -49,8 +47,7 @@ Window {
     // buttons
     Rectangle {
         id: btns
-        x: 10
-        y: 60
+        x: 10; y: 60
         width: parent.width-35
         height: parent.height-70
 
@@ -66,42 +63,23 @@ Window {
                 spacing: 4
 
                 CalButton {
-                    id: btn_ac
-                    color: "#FFAA99"
-                    btnTxt: "AC"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_clear()
-                    }
+                    btnTxt: "AC"; color: "#FFAA99"
+                    MouseArea { anchors.fill: parent; onClicked: value_clear() }
                 }
 
                 CalButton {
-                    id: btn_history
                     btnTxt: "H"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: sg_history()
-                    }
+                    MouseArea { anchors.fill: parent; onClicked: sg_history() }
                 }
 
-                // operators
                 CalButton {
-                    id: btn_equal
                     btnTxt: "="
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: sg_calculate(calLine)
-                    }
+                    MouseArea { anchors.fill: parent; onClicked: sg_calculate(calLine) }
                 }
 
                 CalButton {
-                    id: btn_back
-                    color: "#FFFAA6"
-                    btnTxt: "BK"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_back()
-                    }
+                    btnTxt: "BK"; color: "#FFFAA6"
+                    MouseArea { anchors.fill: parent; onClicked: value_back() }
                 }
             }
 
@@ -112,41 +90,10 @@ Window {
                 spacing: 4
 
                 // numbers
-                CalButton {
-                    id: btn_1
-                    btnTxt: "1"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("1")
-                    }
-                }
-
-                CalButton {
-                    id: btn_2
-                    btnTxt: "2"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("2")
-                    }
-                }
-
-                CalButton {
-                    id: btn_3
-                    btnTxt: "3"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("3")
-                    }
-                }
-
-                CalButton {
-                    id: btn_add
-                    btnTxt: "+"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("+")
-                    }
-                }
+                CalButton { btnTxt: "1" }
+                CalButton { btnTxt: "2" }
+                CalButton { btnTxt: "3" }
+                CalButton { btnTxt: "+" }
             }
 
             // third row
@@ -155,41 +102,10 @@ Window {
                 Layout.preferredHeight: parent.height/5
                 spacing: 4
 
-                CalButton {
-                    id: btn_4
-                    btnTxt: "4"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("4")
-                    }
-                }
-
-                CalButton {
-                    id: btn_5
-                    btnTxt: "5"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("5")
-                    }
-                }
-
-                CalButton {
-                    id: btn_6
-                    btnTxt: "6"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("6")
-                    }
-                }
-
-                CalButton {
-                    id: btn_sub
-                    btnTxt: "-"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("-")
-                    }
-                }
+                CalButton { btnTxt: "4" }
+                CalButton { btnTxt: "5" }
+                CalButton { btnTxt: "6" }
+                CalButton { btnTxt: "-" }
             }
 
             // fourth row
@@ -198,41 +114,10 @@ Window {
                 Layout.preferredHeight: parent.height/5
                 spacing: 4
 
-                CalButton {
-                    id: btn_7
-                    btnTxt: "7"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("7")
-                    }
-                }
-
-                CalButton {
-                    id: btn_8
-                    btnTxt: "8"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("8")
-                    }
-                }
-
-                CalButton {
-                    id: btn_9
-                    btnTxt: "9"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("9")
-                    }
-                }
-
-                CalButton {
-                    id: btn_mul
-                    btnTxt: "*"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("*")
-                    }
-                }
+                CalButton { btnTxt: "7" }
+                CalButton { btnTxt: "8" }
+                CalButton { btnTxt: "9" }
+                CalButton { btnTxt: "*" }
             }
 
             // fifth row
@@ -241,33 +126,9 @@ Window {
                 Layout.preferredHeight: parent.height/5
                 spacing: 4
 
-                CalButton {
-                    id: btn_0
-                    Layout.preferredWidth: parent.width/2+4
-                    btnTxt: "0"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("0")
-                    }
-                }
-
-                CalButton {
-                    id: btn_dot
-                    btnTxt: "."
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input(".")
-                    }
-                }
-
-                CalButton {
-                    id: btn_div
-                    btnTxt: "/"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: value_input("/")
-                    }
-                }
+                CalButton { btnTxt: "0"; Layout.preferredWidth: parent.width/2+4 }
+                CalButton { btnTxt: "." }
+                CalButton { btnTxt: "/" }
             }
         }
     }
