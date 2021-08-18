@@ -65,92 +65,42 @@ Window {
                 Layout.preferredHeight: parent.height/5
                 spacing: 4
 
-                Rectangle {
+                CalButton {
                     id: btn_ac
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
                     color: "#FFAA99"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "AC"
-                    }
-
+                    btnTxt: "AC"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_clear()
-                        }
+                        onClicked: value_clear()
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_history
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "H"
-                    }
-
+                    btnTxt: "H"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            sg_history()
-                        }
+                        onClicked: sg_history()
                     }
                 }
 
                 // operators
-                Rectangle {
+                CalButton {
                     id: btn_equal
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "="
-                    }
-
+                    btnTxt: "="
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            sg_calculate(calLine)
-                        }
+                        onClicked: sg_calculate(calLine)
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_back
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
                     color: "#FFFAA6"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "BK"
-                    }
-
+                    btnTxt: "BK"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_back()
-                        }
+                        onClicked: value_back()
                     }
                 }
             }
@@ -162,91 +112,39 @@ Window {
                 spacing: 4
 
                 // numbers
-                Rectangle {
+                CalButton {
                     id: btn_1
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "1"
-                    }
-
+                    btnTxt: "1"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("1")
-                        }
+                        onClicked: value_input("1")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_2
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "2"
-                    }
-
+                    btnTxt: "2"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("2")
-                        }
+                        onClicked: value_input("2")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_3
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "3"
-                    }
-
+                    btnTxt: "3"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("3")
-                        }
+                        onClicked: value_input("3")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_add
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "+"
-                    }
-
+                    btnTxt: "+"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("+")
-                        }
+                        onClicked: value_input("+")
                     }
                 }
             }
@@ -257,91 +155,39 @@ Window {
                 Layout.preferredHeight: parent.height/5
                 spacing: 4
 
-                Rectangle {
+                CalButton {
                     id: btn_4
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "4"
-                    }
-
+                    btnTxt: "4"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("4")
-                        }
+                        onClicked: value_input("4")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_5
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "5"
-                    }
-
+                    btnTxt: "5"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("5")
-                        }
+                        onClicked: value_input("5")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_6
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "6"
-                    }
-
+                    btnTxt: "6"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("6")
-                        }
+                        onClicked: value_input("6")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_sub
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "-"
-                    }
-
+                    btnTxt: "-"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("-")
-                        }
+                        onClicked: value_input("-")
                     }
                 }
             }
@@ -352,91 +198,39 @@ Window {
                 Layout.preferredHeight: parent.height/5
                 spacing: 4
 
-                Rectangle {
+                CalButton {
                     id: btn_7
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "7"
-                    }
-
+                    btnTxt: "7"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("7")
-                        }
+                        onClicked: value_input("7")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_8
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "8"
-                    }
-
+                    btnTxt: "8"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("8")
-                        }
+                        onClicked: value_input("8")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_9
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "9"
-                    }
-
+                    btnTxt: "9"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("9")
-                        }
+                        onClicked: value_input("9")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_mul
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "*"
-                    }
-
+                    btnTxt: "*"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("*")
-                        }
+                        onClicked: value_input("*")
                     }
                 }
             }
@@ -447,69 +241,31 @@ Window {
                 Layout.preferredHeight: parent.height/5
                 spacing: 4
 
-                Rectangle {
+                CalButton {
                     id: btn_0
-                    Layout.alignment: Qt.AlignCenter
                     Layout.preferredWidth: parent.width/2+4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "0"
-                    }
-
+                    btnTxt: "0"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("0")
-                        }
+                        onClicked: value_input("0")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_dot
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "."
-                    }
-
+                    btnTxt: "."
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input(".")
-                        }
+                        onClicked: value_input(".")
                     }
                 }
 
-                Rectangle {
+                CalButton {
                     id: btn_div
-                    Layout.alignment: Qt.AlignCenter
-                    Layout.preferredWidth: parent.width/4
-                    Layout.preferredHeight: parent.height
-                    border.width: 1
-                    border.color: "gray"
-                    color: "#EEEEEE"
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "/"
-                    }
-
+                    btnTxt: "/"
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            value_input("/")
-                        }
+                        onClicked: value_input("/")
                     }
                 }
             }
